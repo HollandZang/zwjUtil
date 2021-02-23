@@ -1,0 +1,34 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.4.10'
+}
+
+sourceSets {
+    main.java.srcDirs += 'src/main/kotlin/'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.holland.HomePageKt'
+    }
+    from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
+group 'com.holland'
+version '0.1'
+
+repositories {
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+}
+
+task cpRes(type: Copy) {
+    from sourceSets.main.resources
+    into sourceSets.main.java.outputDir
+}
+
+processResources.dependsOn(cpRes)
