@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Text?>
-
-<AnchorPane prefHeight="263.0" prefWidth="471.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.holland.HomePage">
-   <children>
-      <MenuBar id="menu" layoutY="2.0" prefHeight="25.0" prefWidth="471.0" />
-      <Text layoutX="30.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="明文" />
-      <Text layoutX="30.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="密文" />
-      <TextField id="m1" layoutX="64.0" layoutY="47.0" />
-      <TextField id="secret" layoutX="64.0" layoutY="76.0" />
-      <Button id="encode" layoutX="105.0" layoutY="107.0" mnemonicParsing="false" text="加密" />
-      <Button id="decode" layoutX="325.0" layoutY="107.0" mnemonicParsing="false" text="解密" />
-      <Text layoutX="228.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ps: 密文自动加密到明文末尾" wrappingWidth="152.107421875" />
-      <TextField id="m2" layoutX="275.0" layoutY="47.0" />
-      <Text layoutX="241.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="密文" />
-      <TextArea id="text" layoutX="34.0" layoutY="150.0" prefHeight="89.0" prefWidth="402.0" />
-      <Button id="copy" layoutX="161.0" layoutY="107.0" mnemonicParsing="false" text="复制内容" />
-   </children>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="263.0" prefWidth="471.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.holland.HomePage">
+    <MenuBar id="menu" layoutY="2.0" prefHeight="25.0" prefWidth="471.0"/>
+    <Text layoutX="30.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="明文"/>
+    <Text layoutX="30.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="密文"/>
+    <TextField id="m1" layoutX="64.0" layoutY="58.0"/>
+    <TextField id="secret" layoutX="64.0" layoutY="87.0"/>
+    <Button id="encode" layoutX="83.0" layoutY="115.0" mnemonicParsing="false" text="加密"/>
+    <Button id="decode" layoutX="388.0" layoutY="87.0" mnemonicParsing="false" text="解密"/>
+    <Text layoutX="80.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ps: 密文自动加密到明文末尾"
+          wrappingWidth="152.107421875"/>
+    <TextField id="m2" layoutX="297.0" layoutY="57.0" prefHeight="23.0" prefWidth="141.0"/>
+    <Text layoutX="263.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="密文"/>
+    <TextArea id="text" layoutX="34.0" layoutY="150.0" prefHeight="89.0" prefWidth="402.0"/>
+    <Button id="copy" layoutX="136.0" layoutY="115.0" mnemonicParsing="false" text="复制加密文本"/>
+    <Text layoutX="29.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="加密模式"/>
+    <Text layoutX="260.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="解密模式"/>
 </AnchorPane>

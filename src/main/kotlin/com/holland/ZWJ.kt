@@ -1,19 +1,17 @@
 package com.holland
 
-import java.util.*
 import java.util.stream.Collectors
 
 /**
  * 零宽字符加密
  */
+@Suppress("ObjectPropertyName")
 object ZWJ {
     private const val _0 = '\u200b'
     private const val _1 = '\u200c'
 
-    //    private static final char _10 = '\u200d';
     private const val split = '\uFEFF'
 
-    //    private static final String secret = "秘密";
     fun encode(str: String, secret: String): String {
         val list: MutableList<String> = ArrayList()
         for (c in secret.toCharArray()) {
@@ -59,13 +57,15 @@ object ZWJ {
             }
         }
 
-        val secret = list.stream().map { obj: String? -> BinstrToChar(obj!!) }.map { obj: Char -> obj.toString() }
+        val secret = list.stream()
+            .map { obj: String? -> binStrToChar(obj!!) }
+            .map { obj: Char -> obj.toString() }
             .collect(Collectors.joining())
         return Pair(stringBuilder.toString(), secret)
     }
 
-    private fun BinstrToChar(binStr: String): Char {
-        val temp = BinstrToIntArray(binStr)
+    private fun binStrToChar(binStr: String): Char {
+        val temp = binStrToIntArray(binStr)
         var sum = 0
         for (i in temp.indices) {
             sum += temp[temp.size - 1 - i] shl i
@@ -73,7 +73,7 @@ object ZWJ {
         return sum.toChar()
     }
 
-    private fun BinstrToIntArray(binStr: String): IntArray {
+    private fun binStrToIntArray(binStr: String): IntArray {
         val temp = binStr.toCharArray()
         val result = IntArray(temp.size)
         for (i in temp.indices) {

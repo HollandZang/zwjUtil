@@ -1,6 +1,4 @@
 Manifest-Version: 1.0
-Main-Class: com.holland.ui.ConnectKt
+Main-Class: com.holland.HomePageKt
 Class-Path: protobuf-java-2.6.0.jar kotlin-stdlib-1.4.10.jar kotlin-stdl
- ib-common-1.4.10.jar ojdbc6.jar annotations-13.0.jar guava-20.0.jar mys
- ql-connector-java-8.0.11.jar gson-2.8.6.jar
-
+ ib-common-1.4.10.jar annotations-13.0.jar
