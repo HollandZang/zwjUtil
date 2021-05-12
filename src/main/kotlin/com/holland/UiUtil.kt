@@ -29,13 +29,14 @@ object UiUtil {
                 "关于" to {
                     Alert(Alert.AlertType.INFORMATION).apply {
                         contentText = """|微信: Senor_Zhang
-                                         |邮箱: zhn.pop@gmail.com""".trimMargin()
+                                         |邮箱: zhn.pop@gmail.com
+                                         |掘金: https://juejin.cn/user/352263461681214""".trimMargin()
                         show()
                     }
                 },
                 "版本" to {
                     Alert(Alert.AlertType.INFORMATION).apply {
-                        contentText = "版本日期 2021年2月22日"
+                        contentText = "版本日期 2021年05月12日"
                         show()
                     }
                 }
